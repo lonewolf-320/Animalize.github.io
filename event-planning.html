@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Planning - Animalize</title>
+    <title>Pet Event Planning - Animalize</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
@@ -25,89 +26,147 @@
                             <li><a href="#fish">Fish</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#brands">Shop by Brand</a>
-                        <ul class="dropdown-content">
-                            <li><a href="#brand1">Brand 1</a></li>
-                            <li><a href="#brand2">Brand 2</a></li>
-                            <li><a href="#brand3">Brand 3</a></li>
-                        </ul>
-                    </li>
                     <li><a href="index.html#about">About</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                     <li><a href="event-planning.html" class="bold-link">Event Planning</a></li>
                 </ul>
                 <div class="search-cart">
-                    <input type="text" placeholder="Search products..." class="search-input">
-                    <div class="cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
+                    <div class="theme-switch-wrapper" role="button" tabindex="0" aria-label="Toggle theme">
+                        <label class="theme-switch" title="Toggle dark/light mode">
+                            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+                            <span class="slider round">
+                                <i class="fas fa-sun" aria-hidden="true"></i>
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </span>
+                        </label>
                     </div>
+                    <div class="social-header">
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <input type="text" placeholder="Search products..." class="search-input">
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section id="event-planning-hero" class="hero">
-            <div class="container">
-                <h1>Event Planning</h1>
-                <p>Create unforgettable experiences for you and your pets</p>
+        <section class="hero event-hero">
+            <div class="hero-content">
+                <h1>Pet Event Planning</h1>
+                <p>Make your special day even more magical with our furry friends</p>
             </div>
         </section>
 
-        <section id="event-planning-content">
+        <section class="event-types">
             <div class="container">
-                <div class="event-planning-grid">
-                    <div class="event-planning-text">
-                        <h2>We Organize Pet-Friendly Events</h2>
-                        <p>At Animalize, we understand that your pets are family. That's why we offer specialized event planning services to create memorable experiences for both you and your furry friends. Our team of experienced event planners works tirelessly to ensure every detail is perfect, from venue selection to pet-friendly catering.</p>
-                        <h3>Our Services Include:</h3>
-                        <ul>
-                            <li>Pet Birthday Parties</li>
-                            <li>Pet Adoption Celebrations</li>
-                            <li>Pet-Friendly Weddings</li>
-                            <li>Charity Pet Events</li>
-                            <li>Pet Fashion Shows</li>
-                        </ul>
-                        <a href="#contact-form" class="cta-button">Plan Your Event</a>
+                <h2>Our Event Services</h2>
+                <div class="event-grid">
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=800&h=500" alt="Snake Event">
+                        <h3>Exotic Animal Shows</h3>
+                        <p>Experience the thrill of interacting with snakes, iguanas, and other exotic reptiles under expert supervision.</p>
                     </div>
-                    <div class="event-planning-image">
-                        <img src="https://via.placeholder.com/600x400?text=Happy+Pets+at+Event" alt="Happy Pets at Event">
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1534567110243-8875d64ca8ff?auto=format&fit=crop&w=800&h=500" alt="Tiger Cub Event">
+                        <h3>Big Cat Experiences</h3>
+                        <p>Meet our trained tiger cubs and learn about these magnificent creatures from our professional handlers.</p>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1612526001470-1d9f2120e833?auto=format&fit=crop&w=800&h=500" alt="Bird Show">
+                        <h3>Bird of Prey Shows</h3>
+                        <p>Watch majestic eagles, hawks, and owls in action with our spectacular flying demonstrations.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact-form">
+        <section class="event-showcase">
             <div class="container">
-                <h2>Get in Touch</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
+                <h2>Featured Experiences</h2>
+                <div class="showcase-grid">
+                    <div class="showcase-item">
+                        <img src="https://images.unsplash.com/photo-1581852017103-68ac65514cf7?auto=format&fit=crop&w=800&h=500" alt="Python Handler">
+                        <div class="showcase-content">
+                            <h3>Python Experience</h3>
+                            <p>Get up close with our gentle giant pythons</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="showcase-item">
+                        <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=800&h=500" alt="Falcon Show">
+                        <div class="showcase-content">
+                            <h3>Falconry Display</h3>
+                            <p>Witness the ancient art of falconry</p>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="event-type">Event Type:</label>
-                        <select id="event-type" name="event-type" required>
-                            <option value="">Select an event type</option>
-                            <option value="birthday">Pet Birthday Party</option>
-                            <option value="adoption">Pet Adoption Celebration</option>
-                            <option value="wedding">Pet-Friendly Wedding</option>
-                            <option value="charity">Charity Pet Event</option>
-                            <option value="fashion">Pet Fashion Show</option>
-                            <option value="other">Other</option>
-                        </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="event-features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Safety First</h3>
+                        <p>All our animals are vaccinated and trained for social events</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
+                    <div class="feature">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Professional Handlers</h3>
+                        <p>Experienced staff to ensure smooth event operations</p>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <div class="feature">
+                        <i class="fas fa-camera"></i>
+                        <h3>Photo Opportunities</h3>
+                        <p>Perfect moments with our photogenic pets</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>Animal Welfare</h3>
+                        <p>We prioritize our animals' well-being and comfort</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form" class="event-booking">
+            <div class="container">
+                <h2>Book Your Pet Event</h2>
+                <form class="booking-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="event-type">Event Type</label>
+                            <select id="event-type" required>
+                                <option value="">Select Event Type</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="birthday">Birthday Party</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Event Details</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Booking Request</button>
                 </form>
             </div>
         </section>
@@ -138,9 +197,8 @@
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -149,7 +207,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

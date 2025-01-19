@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animalize - Animalize your Life</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <nav>
                 <div class="logo">
-                    <h1>Animalize</h1>
+                    <h1><a href="https://animalize.site">Animalize</a></h1>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -25,23 +26,27 @@
                             <li><a href="#fish">Fish</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown">
-                        <a href="#brands">Shop by Brand</a>
-                        <ul class="dropdown-content">
-                            <li><a href="#brand1">Brand 1</a></li>
-                            <li><a href="#brand2">Brand 2</a></li>
-                            <li><a href="#brand3">Brand 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
                     <li><a href="event-planning.html" class="bold-link">Event Planning</a></li>
                 </ul>
                 <div class="search-cart">
                     <input type="text" placeholder="Search products..." class="search-input">
-                    <div class="cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
+                    <div class="theme-switch-wrapper" role="button" tabindex="0" aria-label="Toggle theme">
+                        <label class="theme-switch" title="Toggle dark/light mode">
+                            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+                            <span class="slider round">
+                                <i class="fas fa-sun" aria-hidden="true"></i>
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="social-header">
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -49,40 +54,98 @@
     </header>
 
     <main>
-        <section id="banner">
+        <section id="banner" class="hero-banner">
+            <div class="banner-slider">
+                <div class="banner-slide">
+                    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1920&h=600" alt="Happy pets banner">
+                    <div class="banner-content">
+                        <h2>Welcome to Animalize</h2>
+                        <p>Animalize your Living</p>
+                        <a href="#featured-products" class="cta-button">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
             <div class="container">
-                <h2>Welcome to Animalize</h2>
-                <p>Your one-stop shop for all your pet needs</p>
+                <h2>Services We Offer</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <h3>Pet Events & Shows</h3>
+                        <p>Experience unforgettable moments with our exotic animal shows featuring snakes, tiger cubs, and birds of prey. Perfect for parties, corporate events, and special occasions.</p>
+                        <a href="event-planning.html" class="service-link">Learn More</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Pet Adoption</h3>
+                        <p>Find your perfect companion from our carefully selected pets. All our animals are vaccinated, health-checked, and ready for their forever homes.</p>
+                        <a href="#featured-products" class="service-link">View Pets</a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <h3>Pet Photography</h3>
+                        <p>Capture magical moments with our exotic animals. Professional photography sessions available for special events and personal photoshoots.</p>
+                        <a href="event-planning.html#contact-form" class="service-link">Book Now</a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="featured-products">
             <div class="container">
-                <h2>Featured Products</h2>
+                <h2>Featured Pets</h2>
                 <div class="product-grid">
                     <div class="product-card" data-product-id="1">
-                        <img src="https://via.placeholder.com/200x200?text=Dog+Food" alt="Dog Food">
-                        <h3>Premium Dog Food</h3>
-                        <p>$19.99</p>
-                        <button class="view-product">View Product</button>
+                        <img src="https://images.unsplash.com/photo-1601979031925-424e53b6caaa?auto=format&fit=crop&w=800&h=800" alt="Golden Retriever Puppy">
+                        <h3>Golden Retriever Puppy</h3>
+                        <p>$800</p>
+                        <ul class="pet-details">
+                            <li>Age: 3 months</li>
+                            <li>Vaccinated: Yes</li>
+                            <li>Gender: Male</li>
+                        </ul>
+                        <button class="view-product" onclick="window.location.href='products/golden-retriever.html'">View Details</button>
                     </div>
                     <div class="product-card" data-product-id="2">
-                        <img src="https://via.placeholder.com/200x200?text=Cat+Toy" alt="Cat Toy">
-                        <h3>Interactive Cat Toy</h3>
-                        <p>$9.99</p>
-                        <button class="view-product">View Product</button>
+                        <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=800&h=800" alt="Persian Cat">
+                        <h3>Persian Cat</h3>
+                        <p>$600</p>
+                        <ul class="pet-details">
+                            <li>Age: 1 year</li>
+                            <li>Vaccinated: Yes</li>
+                            <li>Gender: Female</li>
+                        </ul>
+                        <button class="view-product" onclick="window.location.href='products/persian-cat.html'">View Details</button>
                     </div>
                     <div class="product-card" data-product-id="3">
-                        <img src="https://via.placeholder.com/200x200?text=Dog+Bed" alt="Dog Bed">
-                        <h3>Cozy Dog Bed</h3>
-                        <p>$39.99</p>
-                        <button class="view-product">View Product</button>
+                        <img src="https://images.unsplash.com/photo-1544923408-75c5cef46f14?auto=format&fit=crop&w=800&h=800" alt="Blue and Gold Macaw">
+                        <h3>Blue and Gold Macaw</h3>
+                        <p>$1200</p>
+                        <ul class="pet-details">
+                            <li>Age: 6 months</li>
+                            <li>Trained: Yes</li>
+                            <li>Gender: Male</li>
+                        </ul>
+                        <button class="view-product" onclick="window.location.href='products/macaw.html'">View Details</button>
                     </div>
                     <div class="product-card" data-product-id="4">
-                        <img src="https://via.placeholder.com/200x200?text=Cat+Tree" alt="Cat Tree">
-                        <h3>Multi-level Cat Tree</h3>
-                        <p>$79.99</p>
-                        <button class="view-product">View Product</button>
+                        <img src="https://images.unsplash.com/photo-1520366498724-709889c0c685?auto=format&fit=crop&w=800&h=800" alt="Betta Fish">
+                        <h3>Betta Fish</h3>
+                        <p>$25</p>
+                        <ul class="pet-details">
+                            <li>Type: Halfmoon</li>
+                            <li>Color: Blue</li>
+                            <li>Gender: Male</li>
+                        </ul>
+                        <button class="view-product" onclick="window.location.href='products/betta-fish.html'">View Details</button>
                     </div>
                 </div>
             </div>
@@ -109,19 +172,19 @@
                 <h2>Customer Reviews</h2>
                 <div class="review-grid">
                     <div class="review-card">
-                        <img src="https://via.placeholder.com/100x100?text=User" alt="User 1">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200" alt="User 1">
                         <h4>John D.</h4>
                         <p class="rating">★★★★★</p>
                         <p>"Animalize has the best selection of pet products I've ever seen. My dog loves everything we've bought!"</p>
                     </div>
                     <div class="review-card">
-                        <img src="https://via.placeholder.com/100x100?text=User" alt="User 2">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200" alt="User 2">
                         <h4>Sarah M.</h4>
                         <p class="rating">★★★★☆</p>
                         <p>"Great prices and fast shipping. The cat tree I ordered was easy to assemble and my cats adore it."</p>
                     </div>
                     <div class="review-card">
-                        <img src="https://via.placeholder.com/100x100?text=User" alt="User 3">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200" alt="User 3">
                         <h4>Mike R.</h4>
                         <p class="rating">★★★★★</p>
                         <p>"The customer service at Animalize is outstanding. They helped me choose the perfect aquarium setup for my new fish."</p>
@@ -144,20 +207,18 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#products">Products</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
                     <p>Email: animalized6@gmail.com</p>
-                    <p>Phone: (123) 456-7890</p>
+                    <p>WhatsApp: <a href="https://wa.me/923333737391" class="whatsapp-link">+92 333 3737391</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -178,7 +239,7 @@
             <button id="buy-email">Buy via Email</button>
         </div>
     </div>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

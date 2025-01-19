@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Name - Animalize</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <header>
-        <!-- Header content (same as index.html) -->
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1><a href="../index.html">Animalize</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#products">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../index.html#dogs">Dogs</a></li>
+                            <li><a href="../index.html#cats">Cats</a></li>
+                            <li><a href="../index.html#birds">Birds</a></li>
+                            <li><a href="../index.html#fish">Fish</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../event-planning.html" class="bold-link">Event Planning</a></li>
+                </ul>
+                <div class="search-cart">
+                    <div class="theme-switch-wrapper" role="button" tabindex="0" aria-label="Toggle theme">
+                        <label class="theme-switch" title="Toggle dark/light mode">
+                            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+                            <span class="slider round">
+                                <i class="fas fa-sun" aria-hidden="true"></i>
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="social-header">
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <input type="text" placeholder="Search products..." class="search-input">
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -40,7 +82,7 @@
         <!-- Footer content (same as index.html) -->
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Animalize</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1><a href="index.html">Animalize</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#products">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="index.html#dogs">Dogs</a></li>
+                            <li><a href="index.html#cats">Cats</a></li>
+                            <li><a href="index.html#birds">Birds</a></li>
+                            <li><a href="index.html#fish">Fish</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="event-planning.html" class="bold-link">Event Planning</a></li>
+                </ul>
+                <div class="search-cart">
+                    <div class="theme-switch-wrapper" role="button" tabindex="0" aria-label="Toggle theme">
+                        <label class="theme-switch" title="Toggle dark/light mode">
+                            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+                            <span class="slider round">
+                                <i class="fas fa-sun" aria-hidden="true"></i>
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="social-header">
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                    <input type="text" placeholder="Search products..." class="search-input">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="hero-content">
+                <h1>About Animalize</h1>
+                <p>Passionate about pets, dedicated to their well-being</p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Our Story</h2>
+                        <p>At Animalize, our love for animals goes beyond business. We're a team of dedicated pet enthusiasts who understand that pets are more than just animals – they're family. Our journey began with a simple mission: to create a space where pet lovers can find everything they need for their beloved companions.</p>
+                        
+                        <h3>Our Mission</h3>
+                        <p>We strive to enhance the lives of pets and their owners through quality products, expert advice, and exceptional service. Whether it's finding the perfect companion or creating unforgettable moments through our event services, we're here to make the pet ownership journey special.</p>
+                        
+                        <h3>What Sets Us Apart</h3>
+                        <ul>
+                            <li>Carefully selected, quality-assured pets</li>
+                            <li>Professional event planning services</li>
+                            <li>Dedicated customer support</li>
+                            <li>Commitment to animal welfare</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1444212477490-ca407925329e?auto=format&fit=crop&w=800&h=600" alt="Happy pets">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Call Us</h3>
+                            <p>+92 333 3737391</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email Us</h3>
+                            <p>animalized6@gmail.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fab fa-whatsapp"></i>
+                            <h3>WhatsApp</h3>
+                            <p>+92 333 3737391</p>
+                        </div>
+                        <div class="contact-card">
+                            <i class="fas fa-clock"></i>
+                            <h3>Business Hours</h3>
+                            <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Send us a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Same footer as other pages -->
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
