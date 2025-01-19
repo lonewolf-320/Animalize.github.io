@@ -1610,5 +1610,19 @@ header {
         padding: 30px;
     }
 }
+
+.google-form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.google-form-container iframe {
+    border-radius: 8px;
+}
   
   

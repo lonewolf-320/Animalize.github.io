@@ -110,6 +110,7 @@ function initThemeToggle() {
         localStorage.setItem('theme', newTheme);
         
         console.log('Theme changed to:', newTheme);
+        updateGoogleFormTheme(newTheme === 'dark');
     });
 }
 
@@ -138,3 +139,18 @@ function initCommonFunctionality() {
         });
     }
 }
+
+function updateGoogleFormTheme(isDark) {
+    const googleForm = document.getElementById('google-form');
+    if (googleForm) {
+        const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfWmAE6ngZBavPQeClKcbJdpWtT3mATttWPuolzZNrXj6cGJg/viewform?embedded=true';
+        const darkTheme = '&themeId=1';
+        googleForm.src = isDark ? baseUrl + darkTheme : baseUrl;
+    }
+}
+
+window.addEventListener('load', function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    const isDarkMode = savedTheme === 'dark';
+    updateGoogleFormTheme(isDarkMode);
+});
