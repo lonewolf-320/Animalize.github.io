@@ -11,6 +11,7 @@
     --about-bg: #ffffff;
     --footer-bg: #333;
     --footer-text: #ffffff;
+    --footer-link: #ffffff;
 }
 
 /* Dark Theme Colors */
@@ -30,6 +31,7 @@
     --about-bg: #1e1e1e;
     --footer-bg: #1e1e1e;
     --footer-text: #f4f4f4;
+    --footer-link: #ffffff;
 }
 
 * {
@@ -299,32 +301,44 @@ nav {
 /* Footer Styles */
 footer {
     background-color: var(--footer-bg);
-    color: var(--footer-text);
-    padding: 3rem 0 1rem;
+    padding: 40px 0 20px;
+    margin-top: 40px;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 30px;
+    margin-bottom: 20px;
 }
 
 .footer-section h3 {
-    margin-bottom: 1rem;
+    color: var(--footer-text);
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+    color: var(--footer-text);
 }
 
 .footer-section ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
 }
 
 .footer-section a {
     color: var(--footer-text);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--secondary-color);
 }
 
 .social-icons a {
@@ -335,8 +349,12 @@ footer {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: var(--footer-text);
 }
 
 /* Modal Styles */
@@ -887,10 +905,10 @@ footer {
 }
 
 .booking-form {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px var(--shadow-color);
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px var(--shadow-color);
 }
 
 @media (max-width: 768px) {
@@ -1081,7 +1099,7 @@ header {
 }
 
 .footer-section {
-    color: var(--text-color);
+    color: var(--footer-text);
 }
 
 /* Add this at the end of your CSS */
@@ -1102,6 +1120,7 @@ header {
         --about-bg: #1e1e1e;
         --footer-bg: #1e1e1e;
         --footer-text: #f4f4f4;
+        --footer-link: #ffffff;
     }
 }
 
@@ -1257,25 +1276,40 @@ header {
 
 .service-link {
     display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: var(--secondary-color);
-    color: var(--white);
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #ffffff !important;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-top: 15px;
 }
 
 .service-link:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: #ffffff !important;
 }
 
 /* Dark theme support */
 [data-theme="dark"] .service-card {
     background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .service-card p {
+    color: var(--text-color);
 }
 
 [data-theme="dark"] .service-icon {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .service-link {
+    background-color: var(--primary-color);
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .service-link:hover {
     background-color: var(--secondary-color);
 }
 
@@ -1484,17 +1518,35 @@ header {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    background-color: var(--input-bg);
+    background-color: var(--white);
     color: var(--text-color);
     transition: border-color 0.3s ease;
 }
 
+/* Light mode specific styles */
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group select,
+[data-theme="light"] .form-group textarea {
+    background-color: var(--white);
+    border-color: #ddd;
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background-color: var(--input-bg);
+    border-color: var(--border-color);
+}
+
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);

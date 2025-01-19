@@ -1,13 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betta Fish - Animalize</title>
     <link rel="stylesheet" href="../styles.css">
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1><a href="../index.html">Animalize</a></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="../index.html#products">Products</a>
+                        <ul class="dropdown-content">
+                            <li><a href="../index.html#dogs">Dogs</a></li>
+                            <li><a href="../index.html#cats">Cats</a></li>
+                            <li><a href="../index.html#birds">Birds</a></li>
+                            <li><a href="../index.html#fish">Fish</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../about-us.html">About Us</a></li>
+                    <li><a href="../event-planning.html" class="bold-link">Event Planning</a></li>
+                </ul>
+                <div class="search-cart">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <div class="theme-switch-wrapper" role="button" tabindex="0" aria-label="Toggle theme">
+                        <label class="theme-switch" title="Toggle dark/light mode">
+                            <input type="checkbox" id="theme-toggle" aria-label="Toggle dark/light mode">
+                            <span class="slider round">
+                                <i class="fas fa-sun" aria-hidden="true"></i>
+                                <i class="fas fa-moon" aria-hidden="true"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="social-header">
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <main class="product-page">
         <div class="container">
             <div class="product-details">
@@ -51,5 +96,42 @@
             </div>
         </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Animalize</h3>
+                    <p>Animalize is your trusted source for high-quality pet supplies and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#products">Products</a></li>
+                        <li><a href="../about-us.html">About</a></li>
+                        <li><a href="../event-planning.html">Event Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:animalized6@gmail.com">animalized6@gmail.com</a></p>
+                    <p>WhatsApp: <a href="https://wa.me/923333737391" class="whatsapp-link">+92 333 3737391</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61571936920338" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/animalize.pk/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Animalize. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html> 
